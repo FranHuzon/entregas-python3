@@ -13,3 +13,6 @@ def convertir_a_euros(centimos):
 	euros=centimos/100
 	resto=centimos%100
 	return (euros,resto)
+
+import pasar_a_segundos,calcular_coste,convertir_a_euros
+
