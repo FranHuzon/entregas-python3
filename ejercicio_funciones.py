@@ -14,9 +14,6 @@ def convertir_a_euros(centimos):
 	return euros
 
 
-
-from ejercicio_funciones import pasar_a_segundos,calcular_coste,convertir_a_euros
-
 ###############
 # Ejercicio 1 #
 ###############
