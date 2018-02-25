@@ -19,6 +19,8 @@ print("-"*10,"Ejercicio 1","-"*10)
 # Ejercicio 1 #
 ###############
 
+print()
+
 precio=float(input("Introduce la tarifa por segundo: "))
 numllamadas=int(input("Introduce el número de llamadas realizadas: "))
 duracion=[]
@@ -50,3 +52,17 @@ print("-"*10,"Ejercicio 2","-"*10)
 ###############
 # Ejercicio 2 #
 ###############
+
+print()
+
+with open("comunicaciones.txt","r") as fichero:
+	datos=fichero.readlines()
+
+datos2=[]
+for i in datos:
+	datos2.append(i.replace("\n",""))
+
+
+
+
+
