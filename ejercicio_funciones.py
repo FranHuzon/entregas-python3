@@ -13,6 +13,7 @@ def convertir_a_euros(centimos):
 	euros=centimos/100
 	return euros
 
+print("-"*10,"Ejercicio 1","-"*10)
 
 ###############
 # Ejercicio 1 #
@@ -42,3 +43,10 @@ for elem in duracion:
 	print("El coste de la llamada",elem[0],"es.....",round(convertir_a_euros(float(calcular_coste(elem[1],precio))),2),"€")
 
 print("El coste total de las llamadas es.....",round(convertir_a_euros(calcular_coste(segundostotales,precio)),2),"€")
+
+
+print("-"*10,"Ejercicio 2","-"*10)
+
+###############
+# Ejercicio 2 #
+###############
