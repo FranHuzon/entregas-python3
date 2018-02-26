@@ -15,7 +15,7 @@ def convertir_a_euros(centimos):
 
 print("-"*10,"Ejercicio 1","-"*10)
 
-###############
+############### 
 # Ejercicio 1 #
 ###############
 
