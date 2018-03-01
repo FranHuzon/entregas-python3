@@ -14,7 +14,7 @@ def encontrar_url_municio(municipio):
 
 
 def leer_url(url):
-	from lxml import etree
+	
 	doc=etree.parse(encontrar_url_municio(municipio))
 
 	return doc
