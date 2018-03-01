@@ -1,21 +1,30 @@
+from lxml import etree
+
 def encontrar_url_municio(municipio):
-	from lxml import etree
+	
 	doc=etree.parse('id_municipios_sevilla.xml')
 
 	municipios=doc.findall("municipio")
-	for municipio in municipios:
-		num_id=municipio.attrib["value"].split("-")
-		url="http://www.aemet.es/xml/municipios/localidad_"+num_id[1].replace("id","")+".xml"
-		return url
+	for i in municipios:
+		if municipio.upper()==i.text.upper():
+			num_id=i.attrib["value"].split("-")
+			url="http://www.aemet.es/xml/municipios/localidad_"+num_id[1].replace("id","")+".xml"
+			return url
+	return False
+
 
 def leer_url(url):
-	import webbrowser
-	web=webbrowser.open(url)
-	return web
+	from lxml import etree
+	doc=etree.parse(encontrar_url_municio(municipio))
+
+	return doc
 
 
 municipio=input("Indique el municipio de sevilla que desee: ")
 
-print(leer_url(encontrar_url_municio(municipio)))
+if not encontrar_url_municio(municipio):
+	print("Municipio no encontrado")
+else:
+	print(encontrar_url_municio(municipio))
 
-
+print(leer_url(municipio))
