@@ -11,4 +11,5 @@ r=requests.get("https://developers.zomato.com/api/v2.1/categories",headers=heade
 if r.status_code==200:
 	import json
 	doc=r.json()
-	print(doc)
+	for i in doc["categories"]:
+		print(i["categories"]["name"])
